@@ -15,10 +15,8 @@ RUN set -eux; \
 		fluent-plugin-elasticsearch \
 		fluent-plugin-rewrite-tag-filter \
 		fluent-plugin-grok-parser \
-		fluent-plugin-rewrite \
 		fluent-plugin-datacounter \
 		fluent-plugin-notifier \
-		fluent-plugin-parser \
 	; \
 	gem sources --clear-all \
 	; \
