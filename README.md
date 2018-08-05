@@ -10,7 +10,7 @@ Start the container:
 
 ```console
 # docker run -d --name fluentd \
-  -v /path/to/fluentd.conf:/fluentd/etc/fluentd.conf \
+  -v /path/to/fluent.conf:/fluentd/etc/fluent.conf \
   -p 24224:24224 \
   upshift/fluentd-custom
 ```
