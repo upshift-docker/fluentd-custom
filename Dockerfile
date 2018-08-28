@@ -13,6 +13,7 @@ RUN set -eux; \
 	# cutomize following instruction as you wish
 	gem install \
 		fluent-plugin-elasticsearch \
+		fluent-plugin-mongo \
 		fluent-plugin-rewrite-tag-filter \
 		fluent-plugin-grok-parser \
 		fluent-plugin-datacounter \
