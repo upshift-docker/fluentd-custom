@@ -1,23 +1,24 @@
-FROM fluent/fluentd:latest
+FROM fluentd:latest
 
-LABEL maintainer="docker@upshift.fr"
+LABEL maintainer="docker-remove@upshift.fr"
+
+USER root
 
 RUN set -eux; \
-	apk add --no-cache \
-		tzdata \
-	; \
-	apk add --no-cache --virtual .build-deps \
-		build-base \
-		ruby-dev \
-	; \
+	# install build dependencies
+	#apk add --no-cache --virtual .build-deps \
+	#	build-base \
+	#	ruby-dev \
+	#; \
 	# cutomize following instruction as you wish
 	gem install \
-		fluent-plugin-s3 \
-		fluent-plugin-notifier \
+		fluent-plugin-grafana-loki \
 	; \
 	gem sources --clear-all \
 	; \
-	apk del .build-deps \
-	; \
+	#apk del .build-deps \
+	#; \
 	rm -rf /tmp/* /var/tmp/* /var/cache/apk/*
+
+USER fluent
 
