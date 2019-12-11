@@ -1,4 +1,4 @@
-FROM fluentd:latest
+FROM fluent/fluentd:edge
 
 LABEL maintainer="docker-remove@upshift.fr"
 
