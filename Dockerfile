@@ -14,6 +14,7 @@ RUN set -eux; \
 	gem install \
 		fluent-plugin-grafana-loki \
 		fluent-plugin-influxdb \
+		fluent-plugin-systemd \
 	; \
 	gem sources --clear-all \
 	; \
